@@ -1,0 +1,44 @@
+langchain
+langchain-openai
+langchain-community 
+langgraph
+langsmith
+langchain-chroma
+
+# LLM
+openai
+  
+# Vector DB
+chromadb
+
+# PostgreSQL — psycopg3 for LangGraph, SQLAlchemy for app models
+psycopg[binary,pool] 
+langgraph-checkpoint-postgres
+sqlalchemy
+alembic
+
+# Redis
+redis
+
+# API + validation
+fastapi 
+uvicorn[standard] 
+pydantic
+pydantic-settings 
+
+# UI
+streamlit
+
+# Data / simulator
+faker
+pandas
+
+# Testing
+pytest 
+pytest-asyncio 
+pytest-mock
+httpx
+
+# Utils
+python-dotenv 
+tenacity

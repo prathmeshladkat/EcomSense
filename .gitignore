@@ -1,0 +1,23 @@
+
+# virtual env
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# secrets — NEVER commit this
+.env
+
+# local DBs
+*.db
+chroma_db/
+
+# GCP
+*.json
+!scenarios/*.json
+!evals/datasets/*.json
+
+# OS
+.DS_Store
+EOF
