@@ -114,6 +114,10 @@ Respond ONLY with a JSON object. No text before or after it.
 
     # real input from the agent
     ("human", "{input}"),
+
+    # agent_scratchpad = where tool call results accumulate between steps
+    # LangChain manages this automatically — we just need the placeholder
+    MessagesPlaceholder("agent_scratchpad"),
 ])
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -143,6 +147,7 @@ Respond ONLY with JSON:
   "action_required": "<one specific action, max 100 chars>"    
 }}"""),
     ("human", "{input}"),
+    MessagesPlaceholder("agent_scratchpad"), 
 ])
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -216,6 +221,7 @@ Respond ONLY with JSON:
 }}"""),
     _seg_few_shot,
     ("human", "{input}"),
+    MessagesPlaceholder("agent_scratchpad"), 
 ])
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -256,6 +262,7 @@ If context does not contain enough information:
   Set insight to "Insufficient data to generate insight for this query"
   Set data_points_used to 0"""),
     ("human", "{question}"),
+    MessagesPlaceholder("agent_scratchpad"), 
 ])
 
 # ─────────────────────────────────────────────────────────────────────────────

@@ -21,3 +21,5 @@ chroma_db/
 # OS
 .DS_Store
 EOF
+
+.learning.md
